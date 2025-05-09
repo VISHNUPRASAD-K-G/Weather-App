@@ -3,7 +3,6 @@ function bg_img(wea_desc, crnt_temp, weather_name, crnt_time){
     tm = time[0].split(':')[0];
     if((time[1].toLowerCase() == 'pm' && (tm >= 7 && tm< 12)) || (time[1].toLowerCase() == 'am' && ((tm <= 6 || tm == 12)))){
         bg_img_container.style.backgroundImage = 'url(https://wallpapers-clan.com/wp-content/uploads/2024/03/starfall-night-sky-mountains-aesthetic-gif-preview-desktop-wallpaper.gif)';
-        
     }
     else if(crnt_temp>=38){
         bg_img_container.style.backgroundImage = 'url(https://img.freepik.com/premium-photo/heatwave-hot-sun-landscape-extreme-hot-weather-climate-change-global-warming-background_210545-2599.jpg)';
@@ -63,7 +62,6 @@ function weatherDisply(){
             let min_temp = (items.main.temp_min - 273.15).toFixed(2);
     
             let max_temp = (items.main.temp_max - 273.15).toFixed(2);
-            console.log(max_temp);
 
             function getTimeFromOffsetSeconds(offsetSeconds) {
                 const now = new Date();
