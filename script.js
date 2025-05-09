@@ -1,6 +1,5 @@
 function bg_img(wea_desc, crnt_temp, weather_name, crnt_time){
     const time = crnt_time.split(' ');
-    console.log(time[0][0], time[0].split(':')[0]);
     tm = time[0].split(':')[0];
     if((time[1].toLowerCase() == 'pm' && (tm >= 7 && tm< 12)) || (time[1].toLowerCase() == 'am' && ((tm <= 6 || tm == 12)))){
         bg_img_container.style.backgroundImage = 'url(https://wallpapers-clan.com/wp-content/uploads/2024/03/starfall-night-sky-mountains-aesthetic-gif-preview-desktop-wallpaper.gif)';
