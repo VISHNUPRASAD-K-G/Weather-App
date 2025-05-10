@@ -67,7 +67,8 @@ function weatherDisply(){
                 const now = new Date();
                 const utcTime = now.getTime() + now.getTimezoneOffset() * 60000;
                 const localTime = new Date(utcTime + offsetSeconds  * 1000);
-                return localTime.toLocaleTimeString();
+                // return localTime.toLocaleTimeString();
+                return localTime.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
             }
               
             crnt_time = getTimeFromOffsetSeconds(items.timezone);
