@@ -38,7 +38,7 @@ function bg_img(wea_desc, crnt_temp, weather_name, crnt_time){
 }
 
 function weatherDisply(){
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchCity.value}&appid=e30b4f2947d41f879d186d6580324348`).then((response)=>{
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchCity.value.trim()}&appid=e30b4f2947d41f879d186d6580324348`).then((response)=>{
         response.json().then((items)=>{
 
             let crnt_temp = (items.main.temp - 273.15).toFixed(2);
